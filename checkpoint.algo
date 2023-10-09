@@ -1,0 +1,24 @@
+ALGORITHM checkpoint
+VAR
+    str : STRING;
+    i, nbrchar, nbrvowels, nbrwords : INTEGER:=0 
+BEGIN
+    write("please enter a valid sentence that ends with a dot");
+    READ(str)
+    WHILE (str[i]<> ".") DO
+    nbrchar := nbrchar+1;
+    IF (str[i] ="a" OR str[i] ="u" OR str[i] ="o" OR str[i] ="y" OR
+    str[i] ="e" OR str[i] ="A" OR str[i] ="I" OR str[i] ="U" OR 
+    str[i] ="O" OR str[i] ="Y" OR str[i] ="E" ) THEN
+    nbrvowels := nbrvowels+1;
+        
+    END_IF
+        IF (str[i]=".") THEN 
+        nbrwords := nbrwords+1;
+    END_IF
+        i :=i+1
+    END_WHILE
+    Write("the number of characters is :", nbrchar+1)
+    Write("the number of vowels is :", nbrvowels)
+    Write("the number of words is :", nbrwords)
+END
